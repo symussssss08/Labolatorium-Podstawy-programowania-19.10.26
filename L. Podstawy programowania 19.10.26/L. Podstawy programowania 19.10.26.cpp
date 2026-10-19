@@ -91,7 +91,7 @@ int main()
 	}
 */
 	int r; 
-	cout << "Wprowadz wartosc dla r: " << endl; 
+	cout << "Wprowadz wartosc dla r: " << endl;  
 	cin >> r; 
 
 
