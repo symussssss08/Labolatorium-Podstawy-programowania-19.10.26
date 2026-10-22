@@ -89,20 +89,140 @@ int main()
 		}
 		
 	}
-*/
-	int r; 
-	cout << "Wprowadz wartosc dla r: " << endl;  
+
+	// Zadanie 3 
+
+	float r; 
+	cout << "Wprowadz wartosc dla r (1-0): "  ;  
 	cin >> r; 
 
+	if (r >=0.7 && r <= 1)
+	{
+		cout << " Wspolczynnik r wskazuje na bardzo silna korelacje dodatnia" << endl;
+	}
+	else
+	{
+		if (r >= 0.5)
+		{
+			cout << "Wspolczynnik r wskazuje na silna korelacje dodatnia" << endl;
+		}
+		else
+		{
+			if (r >= 0,3)
+			{
+				cout << " Wspolczynnik r wskazuje na umiarkowana korelacje dodatnia " << endl;
+			}
+			else
+			{
+				if (r >= 0,2)
+				{
+					cout << "Wspolczynnik r wskazuje na slaba korelacje dodatnia " << endl;
+				}
+				else
+				{
+					if (r >= 0)
+					{
+						cout << "Wspolczynnik r wskazuje na brak korelacji  " << endl;
+					}
+				}
+			}
+		}
+	}
 
 	
+	// Zadanie 4 
+	
+	float a, b;
+	char dzialanie; 
+	cout << "Wprowadź wartość dla a:"; 
+	cin >> a; 
+	cout << " Podaj znak (+, -, /):"; 
+	cin >> dzialanie;
+	cout << "Wprowadz wartosc dla b:";
+	cin >> b; 
+	if (dzialanie == '+')
+	{
+		cout << "Wynik: " << a + b << endl;
+	}
+	else if (dzialanie == '-')
+	{
+		cout << "Wynik: " << a - b << endl; 
+	}
+	else if (dzialanie == '/')
+	{
+		if (b == 0)
+		{
+			cout << " Nie mozna dzielic przez 0" << endl; 
+		}
+		else
+		{
+			cout << "Wynik: " << a / b << endl;
+		}
+	}
+	else
+	{
+		cout << "Nieprawidlowy znak dzialania" << endl;
+	}
+ 
 
+	//Zadanie 5 
+	
+	while (true)
+	{
+		cout << "petla nieskonczona" << endl;
+	}
+	bool zmienna_logiczna = true; 
 
-		
+	if (zmienna logiczna == true)
+		cout << " Prawda " << endl;
+	else
+		cout << " falsz " << endl;
+*/
 
+	// Zadanie 6 
+	
+while (true)
+{
+	char moja decyzja; 
+	cout << " Czy chcesz zakonczyc dzialanie programu (tak badz nie): ";
+	cin >> moja decyzja; 
+	if (moja decyzja == ' tak ')
+	{
+		return 0; 
+	}
+}
+	float a, b;
+	char dzialanie;
+	cout << "Wprowadź wartość dla a:";
+	cin >> a;
+	cout << " Podaj znak (+, -, /):";
+	cin >> dzialanie;
+	cout << "Wprowadz wartosc dla b:";
+	cin >> b;
+	if (dzialanie == '+')
+	{
+		cout << "Wynik: " << a + b << endl;
+	}
+	else if (dzialanie == '-')
+	{
+		cout << "Wynik: " << a - b << endl;
+	}
+	else if (dzialanie == '/')
+	{
+		if (b == 0)
+		{
+			cout << " Nie mozna dzielic przez 0" << endl;
+		}
+		else
+		{
+			cout << "Wynik: " << a / b << endl;
+		}
+	}
+	else
+	{
+		cout << "Nieprawidlowy znak dzialania" << endl;
+	}
 
-
-	return 0;
 }
 
 
