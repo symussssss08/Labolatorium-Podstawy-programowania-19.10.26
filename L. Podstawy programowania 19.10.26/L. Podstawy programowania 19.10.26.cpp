@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include <math.h>
 using namespace std; 
 
 int main()
@@ -177,51 +178,239 @@ int main()
 		cout << " Prawda " << endl;
 	else
 		cout << " falsz " << endl;
-*/
+
 
 	// Zadanie 6 
 	
-while (true)
-{
-	char moja decyzja; 
-	cout << " Czy chcesz zakonczyc dzialanie programu (tak badz nie): ";
-	cin >> moja decyzja; 
-	if (moja decyzja == ' tak ')
+	while (true)
 	{
-		return 0; 
-	}
-}
-	float a, b;
-	char dzialanie;
-	cout << "Wprowadź wartość dla a:";
-	cin >> a;
-	cout << " Podaj znak (+, -, /):";
-	cin >> dzialanie;
-	cout << "Wprowadz wartosc dla b:";
-	cin >> b;
-	if (dzialanie == '+')
-	{
-		cout << "Wynik: " << a + b << endl;
-	}
-	else if (dzialanie == '-')
-	{
-		cout << "Wynik: " << a - b << endl;
-	}
-	else if (dzialanie == '/')
-	{
-		if (b == 0)
+		char moja_decyzja; 
+		cout << " Czy chcesz zakonczyc dzialanie programu (tak badz nie): ";
+		cin >> moja_decyzja; 
+		if (moja_decyzja == ' tak ')
 		{
-			cout << " Nie mozna dzielic przez 0" << endl;
+			return 0; 
+		}
+	}
+		float a, b;
+		char dzialanie;
+		cout << "Wprowadź wartość dla a:";
+		cin >> a;
+		cout << " Podaj znak (+, -, /):";
+		cin >> dzialanie;
+		cout << "Wprowadz wartosc dla b:";
+		cin >> b;
+		if (dzialanie == '+')
+		{
+			cout << "Wynik: " << a + b << endl;
+		}
+		else if (dzialanie == '-')
+		{
+			cout << "Wynik: " << a - b << endl;
+		}
+		else if (dzialanie == '/')
+		{
+			if (b == 0)
+			{
+				cout << " Nie mozna dzielic przez 0" << endl;
+			}
+			else
+			{
+				cout << "Wynik: " << a / b << endl;
+			}
 		}
 		else
 		{
-			cout << "Wynik: " << a / b << endl;
+			cout << "Nieprawidlowy znak dzialania" << endl;
 		}
+
+	
+	//Zadanie 7 
+	
+	int iterator = 0; 
+	
+	while (true)
+	{
+		iterator++;
+
+		if (iterator == 200)
+		{
+			break;
+		}
+		if (iterator % 2 == 0)
+		{
+			continue;
+		}
+		cout << iterator << endl;
+	}
+
+
+	//Zadanie 8 
+	int n;
+	cout << " Wprowadz dodatnia liczbe naturalna: ";
+	cin >> n; 
+
+	if (n <= 1)
+	{
+		cout << "Liczba musi być większa od 1" << endl;
+		return 0;
+	}
+
+	for (int i = 2; i <= sqrt(n); i++)
+	{
+		if (n % i == 0)
+		{
+			cout << " Znaleziono dzielnik: " << i << endl;
+			break; 
+		}
+	}
+
+
+
+	//Zadanie 9 
+	int t;
+	int n = 0; 
+	while (n < 6)
+	{
+		cout << "Podaj wartosc temperatury powietrza: "; 
+		cin >> t; 
+		if (t < 0)
+		{
+			cout << "Mroz" << endl; 
+		}
+		else
+		{
+			if (t >= 0 && t < 10)
+			{
+				cout << " Zimno " << endl; 
+			}
+			else
+			{
+				if (t >= 10 && t < 20)
+				{
+					cout << " Umiarkowanie " << endl;
+				}
+				else
+				{
+					if (t >= 20 && t < 30)
+					{
+						cout << " Cieplo " << endl;
+					}
+					else
+					{
+						cout << " goraco" << endl;;
+					}
+				}
+			}
+
+		}
+		n++;
+
+	}
+
+
+
+	//Zadanie 10 
+
+	int a, b, c;
+	cout << "Wprowadz wartosc dla pierwszej liczby : " ;
+	cin >> a; 
+	cout << "Wprowadz wartosc dla drugiej liczby: ";
+	cin >> b;
+	cout << "Wprowadz wartosc dla trzeciej liczby : ";
+	cin >> c;
+
+	if (a >= b && a >= c)
+	{
+		cout << "Najwieksza liczba to liczba pierwsza: " << a << endl; 
+	}
+	else if (b >= a && b >= c)
+	{
+		cout << "Najwieksza liczba to liczba druga: " << b << endl; 
 	}
 	else
 	{
-		cout << "Nieprawidlowy znak dzialania" << endl;
+		cout << " Najwieksza liczba to liczba trzecia: " << c << endl;
 	}
+
+
+	//Zadanie 11
+	
+	int rok;
+	int n = 0; 
+	while (n < 5)
+	{
+		cout << "Podaj rok: ";
+		cin >> rok; 
+
+		if (rok % 4 == 0 && rok % 100 != 0 || (rok % 400 == 0))
+		{
+			cout << "Rok " << rok << " jest przestepny. " << endl;
+		}
+		else
+		{
+			cout << "Rok " << rok << " nie jest przestepny. " << endl;
+		}
+	n++;
+	}
+
+
+	// Zadanie 12 
+
+	int opcja;	
+	cout << " Wybierz z klawiatury numer od 1 do 4: ";
+	cin >> opcja; 
+
+	switch (opcja)
+	{
+	case 1:
+		cout << " Start " << endl; 
+		break; 
+	case 2:
+		cout << " Ustawienia " << endl; 
+		break; 
+	case 3:
+		cout << " Pomoc " << endl; 
+		break; 
+	case 4:
+		cout << " Koniec " << endl; 
+		break; 
+	default:
+		cout << " Wybrano inna opcje " << endl; 
+	}
+*/
+
+	// Zadanie 13 
+
+	int opcja;
+	cout << " Wybierz z klawiatury numer od 1 do 5: ";
+	cin >> opcja;
+
+	switch (opcja)
+	{
+	case 1:
+		cout << " niedostateczny " << endl;
+		break;
+	case 2:
+		cout << " dopuszczajacy " << endl;
+		break;
+	case 3:
+		cout << " dostateczny " << endl;
+		break;
+	case 4:
+		cout << " dobry " << endl;
+		break;
+	case 5:
+		cout << " bardzo dobry " << endl; 
+		break; 
+	default:
+		cout << "Nieprawidlowa wartosc oceny" << endl; 
+		break;
+	}
+
+
+
+
 
 }
 
