@@ -3,7 +3,23 @@
 
 #include <iostream>
 #include <math.h>
+#include<vector>
+#include<algorithm>
+
 using namespace std; 
+
+
+struct WynikMnozenia
+{
+	int czynnik1; 
+	int czynnik2; 
+	int iloczyn; 
+};
+
+bool porownaj(const WynikMnozenia& x, const WynikMnozenia& y)
+{
+	return x.iloczyn < y.iloczyn; 
+}
 
 int main()
 {
@@ -378,7 +394,7 @@ int main()
 	default:
 		cout << " Wybrano inna opcje " << endl; 
 	}
-*/
+
 
 	// Zadanie 13 
 
@@ -410,6 +426,155 @@ int main()
 
 
 
+
+	// Zadanie 1 i 2 
+
+	
+	int a, b; 
+	cout << "Podaj wartosc dla a = ";
+	cin >> a; 
+	cout << "Podaj wartosc dla b = ";
+	cin >> b; 
+	if (a == b)
+	{
+		cout << "Wprowadzone wartosci sa sobie rowne " << endl; 
+	}
+	else
+	{
+		if (a < b)
+		{
+			cout << " A jest mniejsze od B" << endl;
+		}
+		else
+			{
+				cout << " a > b " << endl; 
+			}
+	}
+	
+
+
+
+	// Zadanie 3 
+
+	float a, b; 
+	char dzialanie; 
+	cout << "Podaj pierwsza liczbe ";
+	cin >> a; 
+	cout << "Podaj znak(+, -, *, /) ";
+	cin >> dzialanie; 
+	cout << "Podaj druga liczbe ";
+	cin >> b; 
+	if (b == 0)
+	{
+		cout << "Nie mozna dzielic przez 0 " << endl; 
+		return 0; 
+	}
+	if (dzialanie == '+')
+	{
+		cout << a + b << endl; 
+	}
+	else
+	{
+		if (dzialanie == '-')
+		{
+			cout << a - b << endl; 
+		}
+			
+
+	}
+
+
+	// Zadanie 13 
+	int ocena;
+	cout << "Podaj ocene ";
+	cin >> ocena; 
+
+	switch (ocena)
+	{
+	case 1:
+		cout << " niedostateczna " << endl; 
+		break; 
+	case 2:
+		cout << " dopuszczajaca " << endl; 
+		break; 
+	case 3:
+		cout << "dostateczna " << endl; 
+		break; 
+	case 4:
+		cout << "dobra" << endl; 
+		break; 
+	case 5:
+		cout << "Bardzo dobra " << endl; 
+		break; 
+	case 6:
+		cout << "celujaca " << endl; 
+		break; 
+	default:
+		cout << "Wybrana niepoprawna ocene " << endl; 
+		break; 
+		
+
+	}
+
+
+
+	// Zadanie 14 
+	int suma = 0; 
+	for (int i = 0; i <= 100; i++)
+	{
+		if (i % 3 == 0)
+		{
+			continue;
+		}
+		else
+		{
+			suma += i; 
+		}
+
+	}
+		
+	cout << "suma wynosi: " << suma << endl; 
+
+	lub mozna tez tak
+
+	for (int i = 0; i <= 100; i++)
+	{
+		if (i % 3 == 0) continue;
+    
+		suma += i; // Dodaje tylko pozostałe liczby
+	}
+
+
+
+	for (int a = 1; a <= 10; a++)
+	{
+		for (int b = 1; b <= 10; b++)
+		{
+			cout << "Wynik mnożenia: " << a * b << endl;
+		}
+	}
+
+*/
+
+vector<WynikMnozenia> listaWynikow;
+
+for (int a = 1; a <= 10; a++)
+{
+	for (int b = 1; b <= 10; b++)
+	{
+		listaWynikow.push_back({ a, b, a * b });
+	}
+}
+
+sort(listaWynikow.begin(), listaWynikow.end(), porownaj);
+
+sort(const auto& element : listaWynikow)
+{
+	cout << element.czynnik1 << " * " << element.czynnik2 << " = " << element.iloczyn << endl; 
+}
+return 0;
+
+	
 
 
 }
